@@ -4,16 +4,42 @@ import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
 
-public class PifagorTrio {
+/**
+ * @author tranzero
+ * 
+ */
 
+/**
+ * <p>Клас вирішує задачу 554</p>
+ * 
+ */ 
+public class PifagorTrio {
+	
+	/**
+	 * <p>Колекції в яких зберігаються триплети <code>a, b, c</code> </p>
+	 * 
+	 */ 
 	public List <Integer> a = new ArrayList<>();
 	public List <Integer> b = new ArrayList<>();
 	public List <Integer> c = new ArrayList<>();
 	public int count = -1;
+	
+	/**
+	 * <p>Конструктор, в якому вкладена точка входу</p>
+	 * 
+	 * @param n - значення числа <code>n</code> відповідно до умови.
+	 */
 	public PifagorTrio (int n){
 		printPifagorTrio(n);
 	}
 	
+	/**
+	 * <p>Метод забезпечує пошук усіх можливих триплетів та 
+	 * 		заповнює колекції триплетів.</p>
+	 * 
+	 * @param n - значення числа <code>n</code> відповідно до умови.
+	 * 
+	 */
 	public void findPifagorTrio (int n){
 		
 		for (int i = 1; i <= n; i++){
@@ -33,6 +59,13 @@ public class PifagorTrio {
 		
 	}
 	
+	/**
+	 * <p>Метод забезпечує вивід у консоль усіх можливих триплетів та 
+	 * 		зв'язує усю логіку.</p>
+	 * 
+	 * @param n - значення числа <code>n</code> відповідно до умови.
+	 * 
+	 */
 	public void printPifagorTrio (int n){
 		findPifagorTrio(n);
 		System.out.println("№        a          b           c     ");
@@ -45,10 +78,4 @@ public class PifagorTrio {
 		}
 	}
 	
-	public static void main(String[] args) {
-		
-		
-
-	}
-
 }
