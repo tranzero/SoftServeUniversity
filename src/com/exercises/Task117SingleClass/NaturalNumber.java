@@ -1,4 +1,4 @@
-package com.exercises.firstTask;
+package com.exercises.Task117SingleClass;
 
 
 

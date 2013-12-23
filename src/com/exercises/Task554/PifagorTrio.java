@@ -1,4 +1,4 @@
-package com.exercises.firstTask;
+package com.exercises.Task554;
 
 import java.util.ArrayList;
 import java.util.List;
