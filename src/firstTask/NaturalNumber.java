@@ -53,10 +53,12 @@ public class NaturalNumber {
 	 *		   <code>false</code> - якщо число не задовільняє умову 178 б).
 	 */
 	public  boolean conditionB (long n){
-		if (n%3 == 0 && n%5 != 0)
+		if (n%3 == 0 && n%5 != 0){
 			return true;
-		else
+		}
+		else {
 			return false;
+		}
 		
 	}
 
@@ -69,10 +71,12 @@ public class NaturalNumber {
 	 */
 	public  boolean conditionV (long n){
 		
-		if (Math.sqrt(n) % 2 == 0)
+		if (Math.sqrt(n) % 2 == 0){
 			return true;
-		else
+		}
+		else {
 			return false;
+		}
 		
 		
 	}
@@ -89,10 +93,12 @@ public class NaturalNumber {
 		
 		for (long naturalnumber : naturalArray){
 			
-			if (conditionB(naturalnumber))
-				this.setCountOfConditionB(this.getCountOfConditionB()+1);			
-			if (conditionV(naturalnumber))
+			if (conditionB(naturalnumber)){
+				this.setCountOfConditionB(this.getCountOfConditionB()+1);
+			}
+			if (conditionV(naturalnumber)){
 				this.setCountOfConditionV(this.getCountOfConditionV()+1);
+			}
 			
 		}
 		System.out.println("Кількість чисел, які кратні 3 та не кратні 5 рівна "
