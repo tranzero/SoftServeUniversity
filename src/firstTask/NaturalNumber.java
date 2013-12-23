@@ -7,7 +7,6 @@ package firstTask;
 
 /**
  * <p>Клас вирішує задачу 178 б) в) </p>
- * 
  */
 public class NaturalNumber {
 
@@ -53,7 +52,7 @@ public class NaturalNumber {
 	 *		   <code>false</code> - якщо число не задовільняє умову 178 б).
 	 */
 	public  boolean conditionB (long n){
-		if (n%3 == 0 && n%5 != 0){
+		if ((n % 3 == 0)&&(n % 5 != 0)){
 			return true;
 		}
 		else {
@@ -131,3 +130,4 @@ public class NaturalNumber {
 	
 
 }
+
