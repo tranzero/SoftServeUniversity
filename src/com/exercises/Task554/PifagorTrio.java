@@ -83,7 +83,7 @@ public class PifagorTrio {
 			System.out.print(i + 1 + ")     ");
 			System.out.print(a.get(i) + "     ");
 			System.out.print(b.get(i) + "     ");
-			System.out.println(c.get(i) + "     ");
+			System.out.println(c.get(i) + "    ");
 			
 		}
 	}
