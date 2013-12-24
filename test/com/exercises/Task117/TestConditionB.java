@@ -9,30 +9,21 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 
 public class TestConditionB extends ConditionB {
-
-	@BeforeClass
-	public static void setUpBeforeClass() throws Exception {
-		
-	}
-
-	@AfterClass
-	public static void tearDownAfterClass() throws Exception {
-	}
-
+	
+	private long i = 3;
+	private long j = 5;
+	private ConditionB cond = null;
+	
 	@Before
 	public void setUp() throws Exception {
 		
+		cond = new ConditionB(i, j);
 	}
 
-	@After
-	public void tearDown() throws Exception {
-	}
-
+	
 	@Test
 	public void testCondition() {
-		final long i = 3;
-		final long j = 5;
-		final ConditionB cond = new ConditionB(i, j);
+		
 		boolean condis = cond.condition(i);
 		assertEquals(condis, true);
 		assertTrue(condis);
