@@ -8,26 +8,47 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-public class TestConditionV extends ConditionV {
+public class TestConditionV {
 	
-	private long i = 16;
-	private long j = 5;
+	private long[] testArray = { 16, 9};
 	private ConditionV cond = null;
-
+	
 	@Before
 	public void setUp() throws Exception {
-		cond = new ConditionV(i, j);
+		
+		cond = new ConditionV(testArray);
+		cond = new ConditionV();
 	}
+
 
 	@Test
-	public void testCondition() {
+	public void testConditionTrue() {
 		
-		boolean condis = cond.condition(i);
-		assertEquals(condis, true);
+		int goodNumber = 16;
+		boolean condis = cond.condition(goodNumber);
+		boolean expected = true;
+		assertEquals(expected, condis);
 		assertTrue(condis);
-		condis = cond.condition(j);
-		assertEquals(condis, false);
+		
+	}
+	
+	@Test
+	public void testConditionFalse() {
+		
+		int wrongNumber = 9;
+		boolean condis = cond.condition(wrongNumber);
+		boolean expected = false;
+		assertEquals(expected, condis);
 		assertFalse(condis);
 	}
-
+	
+	@Test
+	public void testCountNaturalForCondition() {
+		int goodNumber = 16; 
+		int expected = cond.getCountOfCondition() + 1;
+		cond.countNaturalForCondition(goodNumber);
+		int count = cond.getCountOfCondition();
+		assertEquals(expected, count);
+		
+	}
 }
