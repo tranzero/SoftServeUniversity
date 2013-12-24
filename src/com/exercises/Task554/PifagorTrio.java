@@ -52,7 +52,7 @@ public class PifagorTrio {
 	 */
 	public final void findPifagorTrio(final int n) {
 		
-		for (int i = 0; i <= n; i++) {
+		for (int i = 1; i <= n; i++) {
 			for (int j = 1; j <= n; j++) {
 				for (int z = 1; z <= n; z++) {
 					if ((((int) Math.pow(i, 2) + (int) Math.pow(j, 2)) 
@@ -80,7 +80,7 @@ public class PifagorTrio {
 		findPifagorTrio(n);
 		System.out.println("¹      a     b     c     ");
 		for (int i = 0; i < count; i++) {
-			System.out.print(i + 1 + ")     ");
+			System.out.print(i + ")     ");
 			System.out.print(a.get(i) + "     ");
 			System.out.print(b.get(i) + "     ");
 			System.out.println(c.get(i) + "    ");
