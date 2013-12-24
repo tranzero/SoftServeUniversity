@@ -4,7 +4,9 @@ import com.exercises.Task117.ATask117;
 import com.exercises.Task117.ConditionB;
 import com.exercises.Task117.ConditionV;
 import com.exercises.Task117SingleClass.NaturalNumber;
+import com.exercises.Task554.OutputTripletesToFile;
 import com.exercises.Task554.PifagorTrio;
+
 
 
 /**
@@ -37,6 +39,9 @@ public final class LauncherFromFirstTask {
 		System.out.println("-------------------------------------------------");
 		
 		final PifagorTrio pifag = new PifagorTrio(150);
+		
+		final OutputTripletesToFile out = new OutputTripletesToFile(
+										new PifagorTrio(258));
 		
 
 	}

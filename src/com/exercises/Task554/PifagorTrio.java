@@ -1,39 +1,46 @@
 package com.exercises.Task554;
-
-import java.util.ArrayList;
-import java.util.List;
-
 /**
  * @author tranzero
  * 
  */
+import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * <p>Клас вирішує задачу 554.</p>
  * 
  */ 
-public class PifagorTrio {
+public class PifagorTrio implements Serializable  {
 	
 	/**
-	 * <p>Колекція  в якій зберігається один із триплетів - <code>a</code>.</p>
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	/**
+	 * <p>Колекція  в якій зберігається один із триплетів - 
+	 * <code>firstTriplet</code>.</p>
 	 */ 
-	private List <Integer> a = new ArrayList<>();
+	 private List <Integer> firstTriplet = new ArrayList<>();
 	
 	/**
-	 * <p>Колекція  в якій зберігається один із триплетів - <code>b</code>.</p>
+	 * <p>Колекція  в якій зберігається один із триплетів - 
+	 * <code>secondTriplet</code>.</p>
 	 */
-	private List <Integer> b = new ArrayList<>();
+	 private List <Integer> secondTriplet = new ArrayList<>();
 	
 	/**
-	 * <p>Колекція  в якій зберігається один із триплетів - <code>c</code>.</p>>
+	 * <p>Колекція  в якій зберігається один із триплетів - 
+	 * <code>thirdTriplet</code>.</p>>
 	 */
-	private List <Integer> c = new ArrayList<>();
+	 private List <Integer> thirdTriplet = new ArrayList<>();
 	
 	/**
 	 * Лічильник кількості триплетів.
 	 */
 	private int count = 0;
-	
+
 	/**
 	 * <p>Конструктор, в якому вкладена точка входу.</p>
 	 * 
@@ -57,16 +64,14 @@ public class PifagorTrio {
 				for (int z = 1; z <= n; z++) {
 					if ((((int) Math.pow(i, 2) + (int) Math.pow(j, 2)) 
 							== (int) Math.pow(z, 2)) && (i <= j) && (j <= z)) {
-						a.add(i);
-						b.add(j);
-						c.add(z);
+						getFirstTriplet().add(i);
+						getSecondTriplet().add(j);
+						getThirdTriplet().add(z);
 						this.count++;
 					}
 				}
 			}
 		}
-		
-		
 	}
 	
 	/**
@@ -81,11 +86,41 @@ public class PifagorTrio {
 		System.out.println("№      a     b     c     ");
 		for (int i = 0; i < count; i++) {
 			System.out.print(i + ")     ");
-			System.out.print(a.get(i) + "     ");
-			System.out.print(b.get(i) + "     ");
-			System.out.println(c.get(i) + "    ");
-			
+			System.out.print(getFirstTriplet().get(i) + "     ");
+			System.out.print(getSecondTriplet().get(i) + "     ");
+			System.out.println(getThirdTriplet().get(i) + "    ");
 		}
 	}
 	
+	/**
+	 *  Геттер для firstTriplet.
+	 * @return firstTriplet
+	 */
+	public final List<Integer> getFirstTriplet() {
+		return firstTriplet;
+	}
+	
+	/**
+	 *  Геттер для secondTriplet.
+	 * @return secondTriplet
+	 */
+	public final List<Integer> getSecondTriplet() {
+		return secondTriplet;
+	}
+
+	/**
+	 *  Геттер для thirdTriplet.
+	 * @return thirdTriplet
+	 */
+	public final List<Integer> getThirdTriplet() {
+		return thirdTriplet;
+	}
+
+	/**
+	 *  Геттер для поля count.
+	 * @return count - значення лычильника
+	 */
+	public final int getCount() {
+		return count;
+	}
 }
