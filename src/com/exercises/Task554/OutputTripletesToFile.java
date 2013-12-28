@@ -27,7 +27,10 @@ public class OutputTripletesToFile {
 	 */
 	public final void writeToFile(final TrioFinder tripletes) { 
 		
-		
+		if (tripletes.getFirstTriplet().size() 
+				== tripletes.getSecondTriplet().size() 
+			&& tripletes.getSecondTriplet().size() 
+			== tripletes.getThirdTriplet().size()) {
 		
 		PrintWriter writer = null;
 		try {
@@ -58,6 +61,6 @@ public class OutputTripletesToFile {
 		}
 	
 	
-	
+		}
 	}
 }
