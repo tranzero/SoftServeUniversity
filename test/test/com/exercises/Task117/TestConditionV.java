@@ -5,8 +5,11 @@ package test.com.exercises.Task117;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
+
 import org.junit.Before;
 import org.junit.Test;
+
+import com.exercises.Task117.ATask117;
 import com.exercises.Task117.ConditionV;
 
 /**
@@ -25,7 +28,7 @@ public class TestConditionV {
 	/**
 	 * ќб'Їкт ConditionB.
 	 */
-	private ConditionV cond = null;
+	private ATask117 cond = null;
 	
 	/**
 	 * ≤н≥ц≥ал≥зовуЇмо об'Їкт ConditionB.

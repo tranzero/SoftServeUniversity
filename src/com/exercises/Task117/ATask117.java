@@ -7,7 +7,7 @@ package com.exercises.Task117;
  * @author tranzero
  *
  */
-public abstract class ATask117 {
+public abstract class ATask117 implements PreCondition {
 
 	/**
 	 * <p>Визначає вхідний масив натуральних чисел (для nonArgument 

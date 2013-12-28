@@ -4,50 +4,36 @@ package com.exercises.Task554;
  * 
  */
 import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * <p>Клас вирішує задачу 554.</p>
  * 
  */ 
-public class PifagorTrio implements Serializable  {
+public class PifagorTrio extends AbstractTrio implements Serializable {
 	
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
 
-	/**
-	 * <p>Колекція  в якій зберігається один із триплетів - 
-	 * <code>firstTriplet</code>.</p>
-	 */ 
-	 private List <Integer> firstTriplet = new ArrayList<>();
 	
-	/**
-	 * <p>Колекція  в якій зберігається один із триплетів - 
-	 * <code>secondTriplet</code>.</p>
-	 */
-	 private List <Integer> secondTriplet = new ArrayList<>();
-	
-	/**
-	 * <p>Колекція  в якій зберігається один із триплетів - 
-	 * <code>thirdTriplet</code>.</p>>
-	 */
-	 private List <Integer> thirdTriplet = new ArrayList<>();
-	
-	/**
-	 * Лічильник кількості триплетів.
-	 */
-	private int count = 0;
-
 	/**
 	 * <p>Конструктор, в якому вкладена точка входу.</p>
 	 * 
-	 * @param n - значення числа <code>n</code> відповідно до умови.
+	 * @param number - значення числа <code>n</code> відповідно до умови.
 	 */
-	public PifagorTrio(final int n) {
-		printPifagorTrio(n);
+	public PifagorTrio(final int number) {
+		super(number);
+	}
+	
+	/**
+	 * <p>Конструктор, в якому вкладена точка входу.</p>
+	 * 
+	 * @param number - значення числа <code>n</code> відповідно до умови.
+	 * @param command - визначає чи виводити триплети на екран
+	 */
+	public PifagorTrio(final int number, final String command) {
+		super(number, command);
 	}
 	
 	/**
@@ -57,17 +43,17 @@ public class PifagorTrio implements Serializable  {
 	 * @param n - значення числа <code>n</code> відповідно до умови.
 	 * 
 	 */
-	public final void findPifagorTrio(final int n) {
+	@Override
+	public final void findTrio(final int n) {
 		
 		for (int i = 1; i <= n; i++) {
 			for (int j = 1; j <= n; j++) {
 				for (int z = 1; z <= n; z++) {
-					if ((((int) Math.pow(i, 2) + (int) Math.pow(j, 2)) 
-							== (int) Math.pow(z, 2)) && (i <= j) && (j <= z)) {
+					if (condition(i, j, z)) {
 						getFirstTriplet().add(i);
 						getSecondTriplet().add(j);
 						getThirdTriplet().add(z);
-						this.count++;
+						super.setCount(getCount() + 1);
 					}
 				}
 			}
@@ -78,49 +64,33 @@ public class PifagorTrio implements Serializable  {
 	 * <p>Метод забезпечує вивід у консоль усіх можливих триплетів та 
 	 * 		зв'язує усю логіку.</p>
 	 * 
-	 * @param n - значення числа <code>n</code> відповідно до умови.
-	 * 
 	 */
-	public final void printPifagorTrio(final int n) {
-		findPifagorTrio(n);
+	@Override
+	public final void printTrio() {
+		if (super.getCount() > 0) {
 		System.out.println("№      a     b     c     ");
-		for (int i = 0; i < count; i++) {
+		for (int i = 0; i < super.getCount(); i++) {
 			System.out.print(i + ")     ");
 			System.out.print(getFirstTriplet().get(i) + "     ");
 			System.out.print(getSecondTriplet().get(i) + "     ");
 			System.out.println(getThirdTriplet().get(i) + "    ");
 		}
-	}
-	
-	/**
-	 *  Геттер для firstTriplet.
-	 * @return firstTriplet
-	 */
-	public final List<Integer> getFirstTriplet() {
-		return firstTriplet;
-	}
-	
-	/**
-	 *  Геттер для secondTriplet.
-	 * @return secondTriplet
-	 */
-	public final List<Integer> getSecondTriplet() {
-		return secondTriplet;
+		} else {
+			System.out.println("This number don't have triplets.");
+		}
 	}
 
-	/**
-	 *  Геттер для thirdTriplet.
-	 * @return thirdTriplet
-	 */
-	public final List<Integer> getThirdTriplet() {
-		return thirdTriplet;
+	@Override
+	public final boolean condition(final int first, final int second, 
+									final int third) {
+		
+		if ((((int) Math.pow(first, 2) + (int) Math.pow(second, 2)) 
+				== (int) Math.pow(third, 2)) && (first <= second) 
+				&& (second <= third)) {
+			return true;
+		}
+		return false;
 	}
-
-	/**
-	 *  Геттер для поля count.
-	 * @return count - значення лычильника
-	 */
-	public final int getCount() {
-		return count;
-	}
+	
+	
 }

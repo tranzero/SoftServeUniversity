@@ -17,7 +17,7 @@ public class OutputTripletesToFile {
 	 * Конструктор з вхідним параметром.
 	 * @param tripletes - об'єкт типу {@link PifagorTrio}
 	 */
-	public OutputTripletesToFile(final PifagorTrio tripletes) {
+	public OutputTripletesToFile(final TrioFinder tripletes) {
 		writeToFile(tripletes);
 	}
 	
@@ -25,7 +25,7 @@ public class OutputTripletesToFile {
 	 * Метод записує триплети в файл.
 	 * @param tripletes - об'єкт типу PifagorTrio
 	 */
-	public final void writeToFile(final PifagorTrio tripletes) { 
+	public final void writeToFile(final TrioFinder tripletes) { 
 		
 		
 		
@@ -33,7 +33,7 @@ public class OutputTripletesToFile {
 		try {
 			writer = new PrintWriter("file-with-pifagortripletes.txt", "UTF-8");
 			writer.println("Number   a     b     c     ");
-			for (int i = 0; i < tripletes.getCount(); i++) {
+			for (int i = 0; i < tripletes.getFirstTriplet().size(); i++) {
 				writer.print("  " + i + ")     ");
 				writer.print(tripletes.getFirstTriplet().get(i) + "     ");
 				writer.print(tripletes.getSecondTriplet().get(i) + "     ");
@@ -52,7 +52,7 @@ public class OutputTripletesToFile {
 			} finally {
 			try {
 				writer.close();
-				} catch (Exception ex) {
+				} catch (Exception e) {
 					System.out.println("Stream was not closed.");
 					}
 		}

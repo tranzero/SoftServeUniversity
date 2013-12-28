@@ -8,7 +8,9 @@ import static org.junit.Assert.assertTrue;
 import org.junit.Before;
 import org.junit.Test;
 
+import com.exercises.Task117.ATask117;
 import com.exercises.Task117.ConditionB;
+import com.exercises.Task117.PreCondition;
 
 /**
  * 
@@ -26,7 +28,7 @@ public class TestConditionB {
 	/**
 	 * ќб'Їкт ConditionB.
 	 */
-	private ConditionB cond = null;
+	private ATask117 cond = null;
 	
 	/**
 	 * ≤н≥ц≥ал≥зовуЇмо об'Їкт ConditionB.
