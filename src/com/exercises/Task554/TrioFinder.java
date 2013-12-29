@@ -60,8 +60,29 @@ public interface TrioFinder {
 	 * 
 	 */
 	boolean condition(int a, int b, int c);
+	
+	/**
+	 * Геттер для {@link #firstTriplet}.
+	 * @return колекцію {@link #firstTriplet}.
+	 */
 	List<Integer> getFirstTriplet();
+	
+	/**
+	 * Геттер для {@link #secondTriplet}.
+	 * @return колекцію {@link #secondTriplet}.
+	 */
 	List<Integer> getSecondTriplet();
+	
+	/**
+	 * Геттер для {@link #thirdTriplet}.
+	 * @return колекцію {@link #thirdTriplet}.
+	 */
 	List<Integer> getThirdTriplet();
+	
+	/**
+	 * Геттер для лічильника триплетів.
+	 * @return поточне значення лічильника.
+	 */
+	int getCount();
 
 }

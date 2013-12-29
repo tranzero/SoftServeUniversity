@@ -1,4 +1,4 @@
-package test.com.exercises.Task117;
+package test.com.exercises.Task178;
 
 
 import static org.junit.Assert.assertEquals;
@@ -8,9 +8,10 @@ import static org.junit.Assert.assertTrue;
 import org.junit.Before;
 import org.junit.Test;
 
-import com.exercises.Task117.ATask117;
-import com.exercises.Task117.ConditionB;
-import com.exercises.Task117.PreCondition;
+
+
+import com.exercises.Task178.ConditionB;
+import com.exercises.Task178.PreCondition;
 
 /**
  * 
@@ -28,7 +29,7 @@ public class TestConditionB {
 	/**
 	 * Об'єкт ConditionB.
 	 */
-	private ATask117 cond = null;
+	private PreCondition cond = null;
 	
 	/**
 	 * Ініціалізовуємо об'єкт ConditionB.
@@ -44,7 +45,7 @@ public class TestConditionB {
 	}
 
 	/**
-	 * Тест {@link condition(final long n))}, коли оба блоки умови 
+	 * Тест condition(final long n)), коли оба блоки умови 
 	 * повертають <code>true</code>.
 	 */
 	@Test
@@ -58,7 +59,7 @@ public class TestConditionB {
 	}
 	
 	/**
-	 * Тест {@link condition(final long n))}, коли оба блоки умови 
+	 * Тест condition(final long n)), коли оба блоки умови 
 	 * повертають <code>false</code>.
 	 */
 	@Test
@@ -72,7 +73,7 @@ public class TestConditionB {
 	}
 	
 	/**
-	 * Тест {@link condition(final long n))}, коли перший блок умови 
+	 * Тест condition(final long n)), коли перший блок умови 
 	 * повертає <code>true</code>, а другий  - <code>false</code>.
 	 */
 	@Test
@@ -86,7 +87,7 @@ public class TestConditionB {
 	}
 	
 	/**
-	 * Тест {@link condition(final long n))}, коли перший блок умови 
+	 * Тест condition(final long n)), коли перший блок умови 
 	 * повертає <code>false</code>, а другий  - <code>true</code>.
 	 */
 	@Test
@@ -100,7 +101,7 @@ public class TestConditionB {
 	}
 	
 	/**
-	 * Тест {@link countNaturalForCondition(final long... naturalArray)}. 
+	 * Тест countNaturalForCondition(final long... naturalArray). 
 	 * Перевірка збільшення лічильника при позитивному проходенні умови.
 	 */
 	@Test

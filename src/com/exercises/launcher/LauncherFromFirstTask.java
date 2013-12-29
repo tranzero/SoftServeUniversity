@@ -1,10 +1,10 @@
 package com.exercises.launcher;
 
-import com.exercises.Task117.ATask117;
-import com.exercises.Task117.ConditionB;
-import com.exercises.Task117.ConditionV;
-import com.exercises.Task117.PreCondition;
-import com.exercises.Task117SingleClass.NaturalNumber;
+
+import com.exercises.Task178.ConditionB;
+import com.exercises.Task178.ConditionV;
+import com.exercises.Task178.PreCondition;
+import com.exercises.Task178SingleClass.NaturalNumber;
 import com.exercises.Task554.OutputTripletesToFile;
 import com.exercises.Task554.PifagorTrio;
 import com.exercises.Task554.TrioFinder;

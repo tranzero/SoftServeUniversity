@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.exercises.Task117;
+package com.exercises.Task178;
 
 /**
  * @author tranzero
@@ -27,5 +27,11 @@ public interface PreCondition {
 	 *		   <code>false</code> - якщо число не задовільняє умову 178 б).
 	 */
 	boolean condition(final long n);
+	
+	/**
+	 * Геттер для лічильника.
+	 * @return значення лічильника
+	 */
+	int getCountOfCondition();
 
 }

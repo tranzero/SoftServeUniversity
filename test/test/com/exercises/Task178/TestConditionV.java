@@ -1,4 +1,4 @@
-package test.com.exercises.Task117;
+package test.com.exercises.Task178;
 
 
 
@@ -9,8 +9,10 @@ import static org.junit.Assert.assertTrue;
 import org.junit.Before;
 import org.junit.Test;
 
-import com.exercises.Task117.ATask117;
-import com.exercises.Task117.ConditionV;
+
+
+import com.exercises.Task178.ConditionV;
+import com.exercises.Task178.PreCondition;
 
 /**
  * 
@@ -28,7 +30,7 @@ public class TestConditionV {
 	/**
 	 * Об'єкт ConditionB.
 	 */
-	private ATask117 cond = null;
+	private PreCondition cond = null;
 	
 	/**
 	 * Ініціалізовуємо об'єкт ConditionB.
@@ -42,7 +44,7 @@ public class TestConditionV {
 	}
 
 	/**
-	 * Тест {@link condition(final long n))}, коли блок умови 
+	 * Тест condition(final long n)), коли блок умови 
 	 * повертає <code>true</code>.
 	 */
 	@Test
@@ -57,7 +59,7 @@ public class TestConditionV {
 	}
 	
 	/**
-	 * Тест {@link condition(final long n))}, коли блок умови 
+	 * Тест condition(final long n), коли блок умови 
 	 * повертає <code>false</code>.
 	 */
 	@Test
@@ -71,7 +73,7 @@ public class TestConditionV {
 	}
 	
 	/**
-	 * Тест {@link countNaturalForCondition(final long... naturalArray)}. 
+	 * Тест countNaturalForCondition(final long... naturalArray). 
 	 * Перевірка збільшення лічильника при позитивному проходенні умови.
 	 */
 	@Test

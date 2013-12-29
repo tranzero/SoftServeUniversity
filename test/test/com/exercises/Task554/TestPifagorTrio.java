@@ -5,14 +5,10 @@ package test.com.exercises.Task554;
 
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
-
 import org.junit.Before;
 import org.junit.Test;
-
-import com.exercises.Task554.AbstractTrio;
 import com.exercises.Task554.PifagorTrio;
+import com.exercises.Task554.TrioFinder;
 
 /**
  * 
@@ -24,7 +20,7 @@ public class TestPifagorTrio {
 	/**
 	 * Îá'ýêò {@link PifagorTrio}.
 	 */
-	private AbstractTrio pifThree = null;
+	private TrioFinder pifThree = null;
 	
 	/**
 	 * 
@@ -54,7 +50,9 @@ public class TestPifagorTrio {
 	 */
 	@Test
 	public final void testFindPifagorTrioSecondTriplet() {
-		pifThree = new PifagorTrio(5, "on");
+		final int inputNumber = 5;
+		final String command = "on";
+		pifThree = new PifagorTrio(inputNumber, command);
 		final int expected = 4;
 		int actual = (int) pifThree.getSecondTriplet().get(0);
 		assertEquals(expected, actual);
@@ -66,7 +64,8 @@ public class TestPifagorTrio {
 	 */
 	@Test
 	public final void testFindPifagorTrioThirdTriplet() {
-		pifThree = new PifagorTrio(5);
+		final int inject = 5;
+		pifThree = new PifagorTrio(inject);
 		final int expected = 5;
 		int actual = (int) pifThree.getThirdTriplet().get(0);
 		assertEquals(expected, actual);

@@ -70,7 +70,7 @@ public abstract class AbstractTrio implements TrioFinder {
 
 	/**
 	 *  Геттер для поля count.
-	 * @return count - значення лычильника
+	 * @return count - значення лiчильника
 	 */
 	public final int getCount() {
 		return count;

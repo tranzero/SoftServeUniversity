@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.exercises.Task117;
+package com.exercises.Task178;
 
 /**
  * @author tranzero
@@ -54,6 +54,7 @@ public abstract class ATask117 implements PreCondition {
 	 * Метод геттер для countOfCondition.
 	 * @return <code>countOfCondition</code> - значення лічильника
 	 */
+	@Override
 	public final int getCountOfCondition() {
 		return countOfCondition;
 	}

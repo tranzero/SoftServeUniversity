@@ -5,4 +5,4 @@
  * @author tranzero
  *
  */
-package com.exercises.Task117SingleClass;
+package com.exercises.Task178SingleClass;
