@@ -53,11 +53,11 @@ public class OutputTripletesToFile {
 			e.printStackTrace();
 			System.out.println("Wrong encoding format!");
 			} finally {
-			try {
+			
+				if (writer != null) {
 				writer.close();
-				} catch (Exception e) {
-					System.out.println("Stream was not closed.");
-					}
+				
+				}
 		}
 	
 	
