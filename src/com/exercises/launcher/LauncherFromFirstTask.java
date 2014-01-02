@@ -44,6 +44,8 @@ public final class LauncherFromFirstTask {
 		
 		final OutputTripletesToFile out = new OutputTripletesToFile(pifag);
 		
+		
+		
 
 	}
 
