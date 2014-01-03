@@ -17,7 +17,8 @@ import com.exercises.Task554.TrioFinder;
  *
  * Класс Ланчер.
  */
-public final class LauncherFromFirstTask {
+public final class LauncherFromFirstTask {     
+	int b = 0;
 	
 	/**
 	 * nonArgument конструктор.
