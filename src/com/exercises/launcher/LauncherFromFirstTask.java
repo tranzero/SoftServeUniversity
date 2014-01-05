@@ -41,7 +41,7 @@ public final class LauncherFromFirstTask {
 		final NaturalNumber result3 = new NaturalNumber();
 		System.out.println("-------------------------------------------------");
 		
-		final TrioFinder pifag = new PifagorTrio(196, "off");
+		final TrioFinder pifag = new PifagorTrio(196, "on");
 		
 		final OutputTripletesToFile out = new OutputTripletesToFile(pifag);
 		
