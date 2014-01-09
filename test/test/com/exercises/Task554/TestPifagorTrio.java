@@ -30,7 +30,7 @@ public class TestPifagorTrio {
 	@Before
 	public final void setUp() {
 		final int inputNumber = 5;
-		final String command = "off";
+		final boolean command = false;
 		pifThree = new PifagorTrio(inputNumber, command);
 	}
 
@@ -51,7 +51,7 @@ public class TestPifagorTrio {
 	@Test
 	public final void testFindPifagorTrioSecondTriplet() {
 		final int inputNumber = 5;
-		final String command = "on";
+		final boolean command = true;
 		pifThree = new PifagorTrio(inputNumber, command);
 		final int expected = 4;
 		int actual = (int) pifThree.getSecondTriplet().get(0);
@@ -77,7 +77,7 @@ public class TestPifagorTrio {
 	 */
 	@Test
 	public final void testNoAddWrong() {
-		pifThree = new PifagorTrio(0, "on");
+		pifThree = new PifagorTrio(0, true);
 		
 		
 				

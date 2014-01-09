@@ -32,7 +32,7 @@ public class PifagorTrio extends AbstractTrio implements Serializable {
 	 * @param number - значення числа <code>n</code> відповідно до умови.
 	 * @param command - визначає чи виводити триплети на екран
 	 */
-	public PifagorTrio(final int number, final String command) {
+	public PifagorTrio(final int number, final boolean command) {
 		super(number, command);
 	}
 	

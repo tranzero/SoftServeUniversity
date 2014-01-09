@@ -21,6 +21,7 @@ public abstract class AbstractTrio implements TrioFinder {
 	 */
 	 public AbstractTrio(final int number) {
 		findTrio(number);
+		System.out.println("Triplets was fond!");
 		
 	}
 	
@@ -30,15 +31,13 @@ public abstract class AbstractTrio implements TrioFinder {
 		 * @param number - значення числа <code>n</code> відповідно до умови.
 		 * @param command - визначає чи виводити триплети на екран
 		 */
-	public AbstractTrio(final int number, final String command) {
+	public AbstractTrio(final int number, final boolean command) {
 		
 		this(number);
-		if (command != ("on")) {
-		
-			System.out.println("Triplets was fond!");
-		} else {
+		if (command) {
 			this.printTrio();
-		}
+			
+		} 
 	}
 	
 	
